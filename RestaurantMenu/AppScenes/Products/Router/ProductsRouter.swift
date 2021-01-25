@@ -11,13 +11,16 @@
 import UIKit
 
 protocol IProductsRouter: class {
-	// do someting...
+	func backToCategories()
 }
 
 class ProductsRouter: IProductsRouter {	
 	weak var view: ProductsViewController?
-	
+
 	init(view: ProductsViewController?) {
 		self.view = view
 	}
+    func backToCategories(){
+        view?.navigate(type: .modalWithNavigation, module: ModulesRoute.categories, completion: nil)
+    }
 }

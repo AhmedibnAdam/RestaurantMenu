@@ -10,6 +10,7 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class ProductsConfiguration {
     static func setup(parameters: [String: Any] = [:]) -> UIViewController {
@@ -21,6 +22,7 @@ class ProductsConfiguration {
         
         controller.interactor = interactor
         controller.router = router
+        controller.productsForCategory = parameters["productsForCategory"] as! List<ProductsDatum>
         interactor.parameters = parameters
         return controller
     }
