@@ -192,3 +192,7 @@ class CategoriesPresenter: ICategoriesPresenter {
 * Barriers to entry
 * Over engineering
 
+# Some App Tests 
+# Unit Test
+test functionalty of the app ( calling API ) 
+using OHHTTPStubs to stub your network requests 
