@@ -12,12 +12,18 @@ This app is an iOS iPad app which displays the menu of a test restaurant. The me
 categories and products. A category can contain many products. A product belongs to one
 cateegory only.
 	
-## Technologies
+## Technologies 
 Project is created with:
 * swift 
-* Clean Swift VIP Architecture
+* Design Architecture: Clean Swift VIP Architecture
 * Alamofire
-* OHHTTPStubs
+* Data Persistence using Realm 
+* Unit testing api with OHHTTPStubs
+* JSON : Used in data parsing on the api level
+* Protocols & Delegates  in VIP and in collection View delegate & datasource
+* Error Handling: using  alerts  related to the first point
+* Asynchronous programming :  calling api & persisting data in background thread 
+* Design Patterns: Singleton for the api & data manager
 	
 ## Clean Swift VIP
 
