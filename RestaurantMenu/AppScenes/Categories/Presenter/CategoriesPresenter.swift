@@ -11,13 +11,23 @@
 import UIKit
 
 protocol ICategoriesPresenter: class {
-	// do someting...
+    func showCats(cats: CategorieRealmsModel)
+    func showProducts(products: ProductsRealmsModel)
 }
 
-class CategoriesPresenter: ICategoriesPresenter {	
+class CategoriesPresenter: ICategoriesPresenter {
+ 
+
 	weak var view: ICategoriesViewController?
 	
 	init(view: ICategoriesViewController?) {
 		self.view = view
 	}
+    func showCats(cats: CategorieRealmsModel) {
+        view?.showCategories(categories: cats)
+    }
+    func showProducts(products: ProductsRealmsModel){
+        view?.showProducts(products: products)
+    }
+    
 }

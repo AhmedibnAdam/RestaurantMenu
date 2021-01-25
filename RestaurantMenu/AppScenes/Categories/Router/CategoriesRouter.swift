@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ICategoriesRouter: class {
-	// do someting...
+    func navigateToProducts(parameters: [String: Any])
 }
 
 class CategoriesRouter: ICategoriesRouter {	
@@ -20,4 +20,7 @@ class CategoriesRouter: ICategoriesRouter {
 	init(view: CategoriesViewController?) {
 		self.view = view
 	}
+    func navigateToProducts(parameters: [String: Any]){
+        view?.navigate(type: .modalWithNavigation, module: ModulesRoute.products(parameters: parameters), completion: nil)
+    }
 }

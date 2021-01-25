@@ -10,7 +10,8 @@ target 'RestaurantMenu' do
   pod 'Alamofire', '~> 4.9.1'
   pod 'SwiftyJSON'
   pod 'RealmSwift', '~> 5.4.8'
-  
+  pod 'Kingfisher'
+  pod 'MBProgressHUD'
   
   target 'RestaurantMenuTests' do
     inherit! :search_paths
