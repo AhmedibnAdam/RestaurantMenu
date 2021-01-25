@@ -17,6 +17,7 @@ extension CategoriesViewController: UICollectionViewDelegate,UICollectionViewDat
         cell.title.text = cat?.name
         let url = URL(string: cat!.image)
         cell.img.kf.setImage(with: url)
+        cell.img.isHidden = true
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

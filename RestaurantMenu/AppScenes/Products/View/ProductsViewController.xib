@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ah8-Ub-Y7R">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="1346"/>
+                    <rect key="frame" x="0.0" y="70" width="1024" height="1276"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2sx-Hh-sRy">
                         <size key="itemSize" width="128" height="128"/>
@@ -33,14 +33,38 @@
                         <outlet property="delegate" destination="-1" id="QO8-iS-ay0"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4o-eP-NAb">
+                    <rect key="frame" x="20" y="10" width="100" height="50"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                    <state key="normal" title="Previous">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRe-5R-azu">
+                    <rect key="frame" x="904" y="10" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="GjO-4L-Lji"/>
+                        <constraint firstAttribute="height" constant="50" id="duE-EW-M2x"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Ah8-Ub-Y7R" firstAttribute="top" secondItem="zRe-5R-azu" secondAttribute="bottom" constant="10" id="9Cd-2q-W7j"/>
+                <constraint firstItem="Ah8-Ub-Y7R" firstAttribute="top" secondItem="O4o-eP-NAb" secondAttribute="bottom" constant="10" id="H5N-Pe-bzn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ah8-Ub-Y7R" secondAttribute="trailing" id="ICM-Xw-GQ0"/>
-                <constraint firstItem="Ah8-Ub-Y7R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Mde-TT-HdW"/>
+                <constraint firstItem="O4o-eP-NAb" firstAttribute="width" secondItem="zRe-5R-azu" secondAttribute="width" id="KpI-0J-yKI"/>
+                <constraint firstItem="Ah8-Ub-Y7R" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="Mde-TT-HdW"/>
                 <constraint firstItem="Ah8-Ub-Y7R" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WPc-Tn-6EZ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ah8-Ub-Y7R" secondAttribute="bottom" id="ZUk-Sl-pND"/>
+                <constraint firstItem="O4o-eP-NAb" firstAttribute="height" secondItem="zRe-5R-azu" secondAttribute="height" id="hl7-cs-6ah"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zRe-5R-azu" secondAttribute="trailing" constant="20" id="vSY-aY-YOy"/>
+                <constraint firstItem="O4o-eP-NAb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="yzL-fq-LGe"/>
             </constraints>
             <point key="canvasLocation" x="138" y="95"/>
         </view>

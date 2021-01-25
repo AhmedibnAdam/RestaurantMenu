@@ -29,13 +29,34 @@ class ProductsViewController: UIViewController {
     @objc func backBtntapped() {
         router?.backToCategories()
     }
-    
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var productsControllers = [UIViewController]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViewPages()
         setupNavigationBar()
         registerCollectionCell()
     }
+    fileprivate func setUpViewPages() {
+        let vc = ProductsViewController()
+        productsControllers.append(vc)
+        
+        let vc2 = ProductsViewController()
+        productsControllers.append(vc2)
+    }
+    func presentPageVC(){
+        guard let first = productsControllers.first else{
+            return
+        }
+        let vc = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+        vc.delegate = self
+        vc.dataSource = self
+        vc.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+    }
+    
     func presentProductDetails(fromVC:UIViewController,product:ProductsDatum) {
         
         let vc = Utilites.getStoryboard(StoryboardId: "Main").instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
@@ -48,7 +69,7 @@ class ProductsViewController: UIViewController {
 }
 
 extension ProductsViewController: IProductsViewController {
-	// do someting...
+	
 }
 
 extension ProductsViewController {
@@ -64,4 +85,20 @@ extension ProductsViewController {
        
     }
 }
-
+extension ProductsViewController: UIPageViewControllerDelegate , UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = productsControllers.firstIndex(of: viewController), index > 0  else {
+            return nil
+        }
+        let bafore = index - 1
+        return productsControllers[bafore]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = productsControllers.firstIndex(of: viewController), index <  productsControllers.count - 1  else {
+            return nil
+        }
+        let after = index + 1
+        return productsControllers[after]
+    }
+}

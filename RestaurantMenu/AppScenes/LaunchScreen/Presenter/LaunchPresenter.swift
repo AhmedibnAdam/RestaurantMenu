@@ -39,6 +39,4 @@ class LaunchPresenter: ILaunchPresenter {
     func handleError() {
         view?.handleError()
     }
-    
-
 }

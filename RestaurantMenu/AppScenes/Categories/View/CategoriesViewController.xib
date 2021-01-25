@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-hh-UlT">
-                    <rect key="frame" x="10" y="10" width="394" height="726"/>
+                    <rect key="frame" x="10" y="70" width="394" height="666"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LWA-35-mI7">
                         <size key="itemSize" width="250" height="250"/>
@@ -33,16 +33,40 @@
                         <outlet property="delegate" destination="-1" id="XZh-Cf-kMP"/>
                     </connections>
                 </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCj-a7-Akm">
+                    <rect key="frame" x="20" y="10" width="100" height="50"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                    <state key="normal" title="Previous">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4Y-h6-avN">
+                    <rect key="frame" x="294" y="10" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="5k7-bX-P2K"/>
+                        <constraint firstAttribute="width" constant="100" id="usA-Sk-PUf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="17"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KDO-hh-UlT" secondAttribute="bottom" id="2xY-wi-uwC"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KDO-hh-UlT" secondAttribute="trailing" constant="10" id="Ngc-vu-651"/>
+                <constraint firstItem="KDO-hh-UlT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="XXj-sv-iW0"/>
+                <constraint firstItem="yCj-a7-Akm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bcB-eO-Pxk"/>
+                <constraint firstItem="yCj-a7-Akm" firstAttribute="height" secondItem="g4Y-h6-avN" secondAttribute="height" id="esj-FZ-Nvs"/>
                 <constraint firstItem="KDO-hh-UlT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="hA1-6s-plo"/>
-                <constraint firstItem="KDO-hh-UlT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="vvt-hq-fF3"/>
+                <constraint firstItem="KDO-hh-UlT" firstAttribute="top" secondItem="yCj-a7-Akm" secondAttribute="bottom" constant="10" id="n0U-UG-bT7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="g4Y-h6-avN" secondAttribute="trailing" constant="20" id="pLm-7X-Z12"/>
+                <constraint firstItem="KDO-hh-UlT" firstAttribute="top" secondItem="g4Y-h6-avN" secondAttribute="bottom" constant="10" id="yPl-p7-6Fu"/>
+                <constraint firstItem="yCj-a7-Akm" firstAttribute="width" secondItem="g4Y-h6-avN" secondAttribute="width" id="yfd-aE-hqF"/>
             </constraints>
-            <point key="canvasLocation" x="-44" y="94.902548725637189"/>
+            <point key="canvasLocation" x="-44.927536231884062" y="94.565217391304358"/>
         </view>
     </objects>
     <resources>

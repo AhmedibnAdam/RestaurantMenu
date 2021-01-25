@@ -38,8 +38,6 @@ class LaunchWorker: ILaunchWorker {
         }
     }
     
-   
-    
     func getCategories( complition :  @escaping (_ error:Error? ,_ success: Bool,_ data: CategoriesModel.Categories?)->Void){
         NetworkService.share.request(endpoint: LaunchEndpoint.categories, success: { (responseData) in
             let response = responseData

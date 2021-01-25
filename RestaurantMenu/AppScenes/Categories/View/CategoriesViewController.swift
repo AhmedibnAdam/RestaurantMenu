@@ -28,12 +28,29 @@ class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var categoriesControllers = [UIViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpViewPages()
         setupNavigationBar()
         registerCollectionCell()
     }
-    
+    fileprivate func setUpViewPages() {
+        let vc = ProductsViewController()
+        categoriesControllers.append(vc)
+        
+        let vc2 = ProductsViewController()
+        categoriesControllers.append(vc2)
+    }
+    func presentPageVC(){
+        guard let first = categoriesControllers.first else{
+            return
+        }
+        let vc = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+        vc.delegate = self
+        vc.dataSource = self
+        vc.setViewControllers([first], direction: .forward, animated: true, completion: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         getCategories()
         getProducts()
@@ -70,5 +87,22 @@ extension CategoriesViewController: ICategoriesViewController {
     }
     func showProducts(products: ProductsRealmsModel){
         self.realmProducts = products
+    }
+}
+extension CategoriesViewController: UIPageViewControllerDelegate , UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let index = categoriesControllers.firstIndex(of: viewController), index > 0  else {
+            return nil
+        }
+        let bafore = index - 1
+        return categoriesControllers[bafore]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let index = categoriesControllers.firstIndex(of: viewController), index <  categoriesControllers.count - 1  else {
+            return nil
+        }
+        let after = index + 1
+        return categoriesControllers[after]
     }
 }

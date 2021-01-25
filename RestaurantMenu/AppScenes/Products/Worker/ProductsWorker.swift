@@ -11,9 +11,9 @@
 import Foundation
 
 protocol IProductsWorker: class {
-	// do someting...
+	
 }
 
 class ProductsWorker: IProductsWorker {
-	// do someting...
+	
 }

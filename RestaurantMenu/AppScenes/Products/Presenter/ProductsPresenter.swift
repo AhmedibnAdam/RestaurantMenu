@@ -11,7 +11,7 @@
 import UIKit
 
 protocol IProductsPresenter: class {
-	// do someting...
+	
 }
 
 class ProductsPresenter: IProductsPresenter {	

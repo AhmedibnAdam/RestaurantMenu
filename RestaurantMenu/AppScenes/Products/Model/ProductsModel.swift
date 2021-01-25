@@ -16,7 +16,6 @@ struct ProductsModel {
     // MARK: - Response
     struct Response: Codable {
         let data: [Datum]?
-
     }
 
     // MARK: - Datum
