@@ -12,12 +12,15 @@ target 'RestaurantMenu' do
   pod 'RealmSwift', '~> 5.4.8'
   pod 'Kingfisher'
   pod 'MBProgressHUD'
+  pod 'OHHTTPStubs/Swift'
+  
   
   target 'RestaurantMenuTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'OHHTTPStubs/Swift'
+   
   end
+  
   
   target 'RestaurantMenuUITests' do
     # Pods for testing

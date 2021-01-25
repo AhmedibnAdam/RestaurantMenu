@@ -12,11 +12,12 @@
 		6609548025BF1ECE001D7CA4 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6609547F25BF1ECE001D7CA4 /* ProductsViewController.swift */; };
 		666C46AD25BF2262003CA731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666C46AC25BF2262003CA731 /* Main.storyboard */; };
 		666C46B225BF2347003CA731 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666C46B125BF2347003CA731 /* ProductDetailsViewController.swift */; };
+		668A293D25BF43E300CFED64 /* testGetProductsDatafromApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668A293C25BF43E300CFED64 /* testGetProductsDatafromApi.swift */; };
+		668A294525BF44CD00CFED64 /* testGetCategoriesDataFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668A294425BF44CD00CFED64 /* testGetCategoriesDataFromAPI.swift */; };
 		6695318025B8E4AC00EEDB82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6695317F25B8E4AC00EEDB82 /* AppDelegate.swift */; };
 		6695318225B8E4AC00EEDB82 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6695318125B8E4AC00EEDB82 /* SceneDelegate.swift */; };
 		6695318925B8E4AF00EEDB82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6695318825B8E4AF00EEDB82 /* Assets.xcassets */; };
 		6695318C25B8E4AF00EEDB82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6695318A25B8E4AF00EEDB82 /* LaunchScreen.storyboard */; };
-		6695319725B8E4B000EEDB82 /* RestaurantMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6695319625B8E4B000EEDB82 /* RestaurantMenuTests.swift */; };
 		669531A225B8E4B000EEDB82 /* RestaurantMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669531A125B8E4B000EEDB82 /* RestaurantMenuUITests.swift */; };
 		669531E825B9C73D00EEDB82 /* CategoriesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669531E025B9C73D00EEDB82 /* CategoriesConfiguration.swift */; };
 		669531E925B9C73D00EEDB82 /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669531E125B9C73D00EEDB82 /* CategoriesPresenter.swift */; };
@@ -82,6 +83,8 @@
 		6609547F25BF1ECE001D7CA4 /* ProductsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		666C46AC25BF2262003CA731 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		666C46B125BF2347003CA731 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
+		668A293C25BF43E300CFED64 /* testGetProductsDatafromApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testGetProductsDatafromApi.swift; sourceTree = "<group>"; };
+		668A294425BF44CD00CFED64 /* testGetCategoriesDataFromAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testGetCategoriesDataFromAPI.swift; sourceTree = "<group>"; };
 		6695317C25B8E4AC00EEDB82 /* RestaurantMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RestaurantMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6695317F25B8E4AC00EEDB82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6695318125B8E4AC00EEDB82 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,7 +92,6 @@
 		6695318B25B8E4AF00EEDB82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6695318D25B8E4AF00EEDB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6695319225B8E4B000EEDB82 /* RestaurantMenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantMenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6695319625B8E4B000EEDB82 /* RestaurantMenuTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuTests.swift; sourceTree = "<group>"; };
 		6695319825B8E4B000EEDB82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6695319D25B8E4B000EEDB82 /* RestaurantMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		669531A125B8E4B000EEDB82 /* RestaurantMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantMenuUITests.swift; sourceTree = "<group>"; };
@@ -223,7 +225,8 @@
 		6695319525B8E4B000EEDB82 /* RestaurantMenuTests */ = {
 			isa = PBXGroup;
 			children = (
-				6695319625B8E4B000EEDB82 /* RestaurantMenuTests.swift */,
+				668A294425BF44CD00CFED64 /* testGetCategoriesDataFromAPI.swift */,
+				668A293C25BF43E300CFED64 /* testGetProductsDatafromApi.swift */,
 				6695319825B8E4B000EEDB82 /* Info.plist */,
 			);
 			path = RestaurantMenuTests;
@@ -442,7 +445,6 @@
 				66C7103F25BCDF150096A869 /* Router */,
 				66C7104325BCDF1E0096A869 /* View */,
 				66C7104725BCDF270096A869 /* Interactor */,
-				66C7104825BCDF310096A869 /* Model */,
 				66C7104E25BCDF540096A869 /* Api */,
 			);
 			path = LaunchScreen;
@@ -522,13 +524,6 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		66C7104825BCDF310096A869 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		66C7104E25BCDF540096A869 /* Api */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +592,6 @@
 				6695318E25B8E4B000EEDB82 /* Sources */,
 				6695318F25B8E4B000EEDB82 /* Frameworks */,
 				6695319025B8E4B000EEDB82 /* Resources */,
-				966536C1E48AEE62881555F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -764,23 +758,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantMenu/Pods-RestaurantMenu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		966536C1E48AEE62881555F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RestaurantMenuTests/Pods-RestaurantMenuTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RestaurantMenuTests/Pods-RestaurantMenuTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RestaurantMenuTests/Pods-RestaurantMenuTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		D25B526BE3588DBD7413AFD2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -870,7 +847,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6695319725B8E4B000EEDB82 /* RestaurantMenuTests.swift in Sources */,
+				668A293D25BF43E300CFED64 /* testGetProductsDatafromApi.swift in Sources */,
+				668A294525BF44CD00CFED64 /* testGetCategoriesDataFromAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1073,6 +1051,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5396X53H;
 				INFOPLIST_FILE = RestaurantMenuTests/Info.plist;
@@ -1084,6 +1064,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Task.RestaurantMenuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestaurantMenu.app/RestaurantMenu";
@@ -1096,6 +1078,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5396X53H;
 				INFOPLIST_FILE = RestaurantMenuTests/Info.plist;
@@ -1107,6 +1091,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Task.RestaurantMenuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RestaurantMenu.app/RestaurantMenu";
@@ -1118,6 +1104,8 @@
 			baseConfigurationReference = B8E9AB02EA90143FE9150C9D /* Pods-RestaurantMenu-RestaurantMenuUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5396X53H;
 				INFOPLIST_FILE = RestaurantMenuUITests/Info.plist;
@@ -1128,6 +1116,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Task.RestaurantMenuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RestaurantMenu;
@@ -1139,6 +1129,8 @@
 			baseConfigurationReference = CAF6E2C6F2B8869760959B93 /* Pods-RestaurantMenu-RestaurantMenuUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MM5396X53H;
 				INFOPLIST_FILE = RestaurantMenuUITests/Info.plist;
@@ -1149,6 +1141,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Task.RestaurantMenuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = RestaurantMenu;
