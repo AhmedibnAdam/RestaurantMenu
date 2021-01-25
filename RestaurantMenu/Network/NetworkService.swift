@@ -56,6 +56,7 @@ class NetworkService {
                     success?(value)
                 case .failure(let error):
                     print(error)
+                    failure?(error)
                 }
                 
             })

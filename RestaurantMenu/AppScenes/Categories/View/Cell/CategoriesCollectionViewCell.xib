@@ -20,27 +20,31 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhH-VV-hT0">
                         <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAM-Is-Phm">
-                                <rect key="frame" x="5" y="221.5" width="240" height="23.5"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-D3-b6X">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="216.5"/>
-                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F5Q-gT-bqb">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QKc-D3-b6X">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="226.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAM-Is-Phm">
+                                        <rect key="frame" x="0.0" y="226.5" width="250" height="23.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23.5" id="wIt-ay-uFe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="QKc-D3-b6X" firstAttribute="top" secondItem="NhH-VV-hT0" secondAttribute="top" id="KZA-3j-VCy"/>
-                            <constraint firstItem="qAM-Is-Phm" firstAttribute="top" secondItem="QKc-D3-b6X" secondAttribute="bottom" constant="5" id="Klh-3j-d6t"/>
-                            <constraint firstAttribute="trailing" secondItem="qAM-Is-Phm" secondAttribute="trailing" constant="5" id="M8d-Eh-fHT"/>
-                            <constraint firstItem="qAM-Is-Phm" firstAttribute="leading" secondItem="NhH-VV-hT0" secondAttribute="leading" constant="5" id="Tix-e3-xlO"/>
-                            <constraint firstAttribute="bottom" secondItem="qAM-Is-Phm" secondAttribute="bottom" constant="5" id="WXo-hL-n8U"/>
-                            <constraint firstItem="qAM-Is-Phm" firstAttribute="centerX" secondItem="NhH-VV-hT0" secondAttribute="centerX" id="YG2-L4-5kE"/>
-                            <constraint firstAttribute="trailing" secondItem="QKc-D3-b6X" secondAttribute="trailing" id="aej-c0-qTC"/>
-                            <constraint firstItem="QKc-D3-b6X" firstAttribute="leading" secondItem="NhH-VV-hT0" secondAttribute="leading" id="uNZ-Aq-GDH"/>
+                            <constraint firstAttribute="bottom" secondItem="F5Q-gT-bqb" secondAttribute="bottom" id="EdZ-tg-sLL"/>
+                            <constraint firstItem="F5Q-gT-bqb" firstAttribute="leading" secondItem="NhH-VV-hT0" secondAttribute="leading" id="S0A-5s-EaG"/>
+                            <constraint firstItem="F5Q-gT-bqb" firstAttribute="top" secondItem="NhH-VV-hT0" secondAttribute="top" id="ncs-9q-AXJ"/>
+                            <constraint firstAttribute="trailing" secondItem="F5Q-gT-bqb" secondAttribute="trailing" id="wsc-71-g6h"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -23,4 +23,5 @@ class ProductsRouter: IProductsRouter {
     func backToCategories(){
         view?.navigate(type: .modalWithNavigation, module: ModulesRoute.categories, completion: nil)
     }
+ 
 }

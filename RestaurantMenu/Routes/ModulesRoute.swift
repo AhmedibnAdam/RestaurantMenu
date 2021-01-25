@@ -26,7 +26,7 @@ extension ModulesRoute {
             return CategoriesConfiguration.setup()
         case .products(let parameters):
             return ProductsConfiguration.setup(parameters: parameters)
-        
+
         }
     }
 }

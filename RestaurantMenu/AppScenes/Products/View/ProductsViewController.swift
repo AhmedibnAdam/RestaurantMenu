@@ -16,9 +16,9 @@ protocol IProductsViewController: class {
 }
 
 class ProductsViewController: UIViewController {
-	var interactor: IProductsInteractor?
-	var router: IProductsRouter?
-
+    var interactor: IProductsInteractor?
+    var router: IProductsRouter?
+    
     var productsForCategory = List<ProductsDatum>()
     let cellID = "CategoriesCollectionViewCell"
     
@@ -36,6 +36,15 @@ class ProductsViewController: UIViewController {
         setupNavigationBar()
         registerCollectionCell()
     }
+    func presentProductDetails(fromVC:UIViewController,product:ProductsDatum) {
+        
+        let vc = Utilites.getStoryboard(StoryboardId: "Main").instantiateViewController(withIdentifier: "ProductDetailsViewController") as! ProductDetailsViewController
+         
+         vc.modalPresentationStyle = .custom
+         vc.product = product
+         fromVC.present(vc, animated: false, completion: nil)
+         
+     }
 }
 
 extension ProductsViewController: IProductsViewController {
@@ -44,7 +53,7 @@ extension ProductsViewController: IProductsViewController {
 
 extension ProductsViewController {
     func setupNavigationBar() {
-        navigationItem.title = "Social Page"
+        navigationItem.title = productsForCategory[0].category?.name
         navigationItem.setLeftBarButton(backBtn, animated: true)
         navigationItem.leftBarButtonItem?.tintColor = .black
     }
@@ -56,30 +65,3 @@ extension ProductsViewController {
     }
 }
 
-extension ProductsViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return productsForCategory.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! CategoriesCollectionViewCell
-        let product = productsForCategory[indexPath.row]
-        cell.title.text = product.name
-        let url = URL(string: product.image)
-        cell.img.kf.setImage(with: url)
-        return cell
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let wifth = (collectionView.bounds.width - 30 )/3.0
-        let yourHeight = wifth
-
-        return CGSize(width: wifth, height: yourHeight)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-
-    }
-   
-}

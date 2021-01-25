@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import MBProgressHUD
 
-class Utils: NSObject {
+class Utilites: NSObject {
     
     
     //MARK: App Delegate
@@ -28,6 +28,7 @@ class Utils: NSObject {
           
         return storyboard
       }
+
     
     //MARK: Alert
     
@@ -80,20 +81,13 @@ class Utils: NSObject {
         MBProgressHUD.hide(for: view, animated: true)
     }
     
-
     //MARK: Language
     
     static func getStringWithTag(tag:String)->String{
-        
         return NSLocalizedString(tag, comment: "")
     }
     
     static func isArabic() -> Bool {
-        
         return false
-        
     }
-    
-    
-    
 }
