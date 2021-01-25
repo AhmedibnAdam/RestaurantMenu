@@ -127,30 +127,68 @@ pass parameters to destination configration class
 import Foundation
 import UIKit
 
-enum MostPopularRoute: IRouter {
-    /*
-     If you want passing with parameters
-     you just add like this:
-         */
-     case sample
-     case sample2(parameter: [String: Any])
-    /*
-     you can use: String, Int, [String: Any], etc..
-    */
+enum ModulesRoute: IRouter {
+    case launch
+    case categories
+    case products(parameters:[String:Any])
 }
 
-extension MostPopularRoute {
+extension ModulesRoute {
     var module: UIViewController? {
-        /*
-         Setup module with parameters like:
-           */
-         switch self {
-         case .sample:
-            return SampleConfiguration.setup()
-        case .sample2(let parameters):
-            return SampleConfiguration2.setup(parameters: parameters)
-         }
-  
+        switch self {
+        case .launch:
+            return LaunchConfiguration.setup()
+        case .categories:
+            return CategoriesConfiguration.setup()
+        case .products(let parameters):
+            return ProductsConfiguration.setup(parameters: parameters)
+        
+        }
     }
 }
+
 ```
+# Presenter
+
+The Presenter is responsible for presentation logic.
+It decides how data will be presented to the user. 
+The Presenter organizes the response sent by the Interactor into view models suitable for display.
+Next, the Presenter passes those view models back to the View Controller to display to the user
+```swift
+import UIKit
+
+protocol ICategoriesPresenter: class {
+    func showCats(cats: CategorieRealmsModel)
+    func showProducts(products: ProductsRealmsModel)
+}
+
+class CategoriesPresenter: ICategoriesPresenter {
+ 
+
+	weak var view: ICategoriesViewController?
+	
+	init(view: ICategoriesViewController?) {
+		self.view = view
+	}
+    func showCats(cats: CategorieRealmsModel) {
+        view?.showCategories(categories: cats)
+    }
+    func showProducts(products: ProductsRealmsModel){
+        view?.showProducts(products: products)
+    }
+    
+}
+```
+
+
+# Advantages of Clean Swift
+* Ready-made templates
+* Unidirectional flow of data
+* Testability
+* Reusability
+* Collaboration
+
+# Disadvantages of Clean Swift
+* Barriers to entry
+* Over engineering
+
