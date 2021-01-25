@@ -21,6 +21,7 @@ class CategoriesConfiguration {
         
         controller.interactor = interactor
         controller.router = router
+        controller.realmCats = parameters["Categories"] as? CategorieRealmsModel
         interactor.parameters = parameters
         return controller
     }

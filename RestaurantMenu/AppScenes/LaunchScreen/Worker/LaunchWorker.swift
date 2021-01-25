@@ -29,12 +29,12 @@ class LaunchWorker: ILaunchWorker {
                 
             } catch let error {
                 print(error)
-                complition(nil, true, nil)
+                complition(nil, false, nil)
             }
             
         }) { (error) in
             print(error as Any)
-             complition(nil, true, nil)
+             complition(nil, false, nil)
         }
     }
     
@@ -51,12 +51,12 @@ class LaunchWorker: ILaunchWorker {
                 
             } catch let error {
                 print(error)
-                complition(nil, true, nil)
+                complition(nil, false, nil)
             }
             
         }) { (error) in
             print(error as Any)
-             complition(nil, true, nil)
+             complition(nil, false, nil)
         }
     }
     func addCatsToCash(_ cat: CategoriesModel.Categories){

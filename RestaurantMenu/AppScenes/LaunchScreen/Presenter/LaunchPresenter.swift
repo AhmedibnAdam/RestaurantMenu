@@ -15,6 +15,7 @@ protocol ILaunchPresenter: class {
     func showCategories(cats: CategoriesModel.Categories)
     func showProducts()
     func showCategories()
+    func handleError()
 }
 
 class LaunchPresenter: ILaunchPresenter {
@@ -35,4 +36,9 @@ class LaunchPresenter: ILaunchPresenter {
     func showCategories(){
         view?.showCategories()
     }
+    func handleError() {
+        view?.handleError()
+    }
+    
+
 }

@@ -44,7 +44,7 @@ class LaunchInteractor: ILaunchInteractor {
                 self.presenter?.showCategories(cats: responce!)
             }
             else{
-                
+                self.presenter?.handleError()
             }
         })
     }

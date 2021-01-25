@@ -9,43 +9,47 @@
 //              * https://github.com/AhmedibnAdam
 
 import UIKit
+import RealmSwift
 
 protocol ILaunchViewController: class {
 	var router: ILaunchRouter? { get set }
     func showProducts(products: ProductsModel.Response)
     func showCategories(cats: CategoriesModel.Categories)
     func showCategories()
-   
+    func handleError()
 }
 
 class LaunchViewController: UIViewController {
 	var interactor: ILaunchInteractor?
 	var router: ILaunchRouter?
 
- 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getCategories()
-        getProducts()
+        
+            getCategories()
     }
+    
     fileprivate func getCategories() {
         interactor?.getCategories()
     }
+    
     fileprivate func getProducts() {
         interactor?.getProducts()
     }
   
-    
 }
 
 extension LaunchViewController: ILaunchViewController {
+    
+    func showCategories(cats: CategoriesModel.Categories) {
+        persisCategories(categories: cats)
+        getProducts()
+    }
 
     func showProducts(products : ProductsModel.Response) {
         persistProducts(products: products)
     }
-    func showCategories(cats: CategoriesModel.Categories) {
-        persisCategories(categories: cats)
-    }
+ 
     func showCategories() {
         router?.navigateToCategories()
     }
@@ -56,12 +60,24 @@ extension LaunchViewController: ILaunchViewController {
     fileprivate func persisCategories(categories: CategoriesModel.Categories) {
         interactor?.addListOfCategoriesToCash(cat: categories)
     }
+    func handleError() {
+        Utilites.showAlert(alertTitle: "Alert", alertMessage: "Connection error , Re-downloading caregories ...", cancelTitle: "Cancel", otherTitle: "Re-download", VC: self) { (ok) in
+            if (ok != 0) {
+                guard RealmManager.shared.getObjectOf(type: CategorieRealmsModel.self).last != nil else {
+                    self.getCategories()
+                    return
+                }
+                self.showCategories()
+            }
+            else{
+                guard RealmManager.shared.getObjectOf(type: CategorieRealmsModel.self).last != nil else {
+                    self.getCategories()
+                    return
+                }
+                self.showCategories()
+            }
+        }
+        
+    }
 }
 
-extension LaunchViewController {
-	// do someting...
-}
-
-extension LaunchViewController {
-	// do someting...
-}
